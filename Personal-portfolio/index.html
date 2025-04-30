@@ -6,27 +6,40 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2dcd1464d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="header">
         <div class="container">
-            <nav>
-                <img src="image/logo.png" class="logo">
-                <ul>
-                    <li><a href="#header"data="Home">Home</a></li>
-                    <li><a href="#about"data="About">About</a></li>
-                    <li><a href="#Courses"data="Courses">Courses</a></li>
-                    <li><a href="#Project"data="Project">Project</a></li>
-                    <li><a href="#Contact"data="Contact">Contact</a></li>  
-                </ul>
-            </nav>
-            <div class="header-text">
-                <h1>Hello I'm</h1>
-                <h2><span>Akash B S</span></h2>
-                <p><span class="typing"></span></p>
-                </div>
+          <nav>
+            <img src="image/logo.png" class="logo">
+            <div class="hamburger" onclick="toggleMenu()">
+              &#9776;
             </div>
+            <ul id="nav-links">
+              <li><a href="#header" data="Home">Home</a></li>
+              <li><a href="#about" data="About">About</a></li>
+              <li><a href="#Project" data="Project">Project</a></li>
+              <li><a href="#Contact" data="Contact">Contact</a></li>
+            </ul>
+          </nav>
+      
+          <div class="header-text">
+            <h1>Hello I'm</h1>
+            <h2><span>Akash B S</span></h2>
+            <h3><span class="interest">I'm Interested In</span></h3>
+            <p><span class="typing"></span></p>
+          </div>
         </div>
+      </div>
+      
+      <script>
+        function toggleMenu() {
+          document.getElementById("nav-links").classList.toggle("active");
+        }
+      </script>
+      
     
     
     <div class="img">
@@ -35,37 +48,37 @@
         </div>
     </div>
     <!--------about------->
+    
     <div id="about" class="about-container">
     <div class="row">
       <div class="about-col-1">
-          <img src="image/profile.jpg" alt="Profile Picture">
+          <img src="image/profile (1).jpg" alt="Profile Picture">
       </div>
       <div class="about-col-2">
-          <div class="about-content">
-              <h1 class="sub-title">About Me</h1>
-              <p>
-                  Hello! I'm Akash, an aspiring web developer driven by a profound passion for technology. 
-                  Having recently graduated with a degree in Computer Science Engineering, 
-                  I possess a solid foundation in key web technologies such as HTML, CSS, JavaScript, and Python.
-                  My journey in web development is marked by an unwavering commitment to continuous learning and professional growth.
-              </p>
-              <div class="tab-contents" id="education">
-                  <div class="content">
-                      <h4>EDUCATION </h4>
-                  </div>
-                  <ul>
-                      <li>
-                          <span>Higher Education</span> <br>
-                          10th (State Board) - 2019<br>
-                          Sundar Matriculation Higher Secondary School<br>
-                          12th (State Board) - 2021<br>
-                          Sundar Matriculation Higher Secondary School<br>
-                          <span>2021-Current</span><br>
-                          Pursuing a degree in Computer Science Engineering at S.A. Engineering College
-                      </li>
-                  </ul>
+        <div class="about-content">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Myself Akash B S, a pre-final year Computer Science Engineering student at S.A. Engineering College. I have maintained a CGPA of 7.96 and have a keen interest in Web Development, UI/UX Designing, and Cloud Computing. My passion for technology and innovation drives me to constantly upskill and explore new tools and frameworks.
+                <br>
+              I have completed certifications in Software Testing (NPTEL), Wipro Java Full Stack, and hold an Honours Diploma in Computer Applications. My project experience includes building a personal portfolio, a fabrication service website, and a food donation.
+          <br>
+              I have actively participated in technical workshops and events that have helped refine my knowledge and communication skills. I am also a proactive learner with strong problem-solving abilities, team collaboration, and time management skills.
+          
+              <br><br>
+              <strong>Interests:</strong> Web Development, UI/UX Designing, Cloud Computing
+            </p>
+          
+            <div class="tab-contents" id="education">
+              <div class="content">
+                <h4>EDUCATION</h4>
               </div>
-          </div>
+              <ul>
+                <li><span>2021 - 2025</span><br>B.E. Computer Science Engineering, S.A. Engineering College<br>CGPA: 7.96</li>
+                <li><span>12th (State Board) - 2021</span><br>Sundar Matriculation Higher Secondary School<br>Percentage: 82.4%</li>
+                <li><span>10th (State Board) - 2019</span><br>Sundar Matriculation Higher Secondary School<br>Percentage: 80.2%</li>
+              </ul>
+            </div>
+          </div>          
       </div>
   </div>
 </div>
@@ -182,84 +195,120 @@
         </div>
     </div>
     </div>
-    <!-- Inside the Courses section -->
-<div id="Courses">
-    <div class="container">
-        <h1 class="Courses">Courses</h1>
-        <div class="course-content">
-            <div class="course-item">
-                <img src="courses/wipro.jpg" alt="Course 1 Image">
-                <h2>Wipro Java Full Stack</h2>
-                <!--<p>Description of the first course goes here.</p>-->
-            </div>
-            <div class="course-item">
-                <img src="courses/java intoduction infosys.jpg" alt="Course 2 Image">
-                <h2>Java Infosys</h2>
-                <!--<p>Description of the second course goes here.</p>-->
-            </div>
-            <div class="course-item">
-                <img src="courses/web udemy.jpg" alt="Course 3 Image">
-                <h2>Web development</h2>
-                <!--<p>Description of the third course goes here.</p>-->
-            </div>
-          </div>     
+    <!-- Inside the Courses section --><!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<section id="Courses" class="certificates-section">
+  <h1 class="section-title">Certificates</h1>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <<div class="swiper-slide">
+        <div class="certificate-card">
+          <img src="courses/wiprologo.jpg" alt="Wipro Certificate" class="certificate-img"/>
+          <h2>Wipro Java Full Stack</h2>
+          <a href="courses/Wipro Certificate.pdf" target="_blank" class="view-btn">View Certificate</a>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="certificate-card">
+          <img src="courses/nptel.jpg" alt="Infosys Certificate" class="certificate-img"/>
+          <h2>Software Testing</h2>
+          <a href="courses/NPTEL.pdf" target="_blank" class="view-btn">View Certificate</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="certificate-card">
+          <img src="courses/csclogo.jpg" alt="Web Dev Certificate" class="certificate-img"/>
+          <h2>Honours Diploma in Computer Application</h2>
+          <a href="courses/HDCA CSC .pdf" target="_blank" class="view-btn">View Certificate</a>
+        </div>
+      </div>
     </div>
-    
-</div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.mySwiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3 seconds
+      disableOnInteraction: false,
+    },
+    spaceBetween: 30,
+    slidesPerView: 1,
+    centeredSlides: true,
+    grabCursor: true,
+  });
+</script>
+
 
     <!-------Project---------->
-<div id="Project">
-    <div class="container">
-        <h1 class="Project">Projects</h1>
-        <div class="project-content">
-            <div class="project-item">
-                <img src="project/project 1.png" alt="Project 1 Image">
-                <h2>Fabrication Website</h2>
-                <a href="https://github.com/akash-b-s/Sri-Lakshmi-Industrial.git" class="project-link">Learn More</a>
+    <div id="Project" class="project-section">
+        <div class="container">
+          <h1 class="section-title">Projects</h1>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="project/project 1.png" alt="Project 1 Image" class="project-image" />
+              <h2 class="project-title">Fabrication Website</h2>
+              <p class="project-description">A website for showcasing metal fabrication services, including NEMA enclosures, racks, and more.</p>
+              <a href="https://github.com/akash-b-s/Sri-Lakshmi-Industrial.git" class="project-button">GitHub</a>
             </div>
-            <div class="project-item">
-                <img src="project/food donation.png" alt="Project 2 Image">
-                <h2>Food Donation Website</h2>
-                <p></p>
-                <a href="https://github.com/akash-b-s/Food-Donation-application.git" class="project-link">Learn More</a>
+            <div class="project-card">
+              <img src="project/food donation.png" alt="Project 2 Image" class="project-image" />
+              <h2 class="project-title">Food Donation Website</h2>
+              <p class="project-description">A platform connecting food donors with NGOs to reduce food waste and help those in need.</p>
+              <a href="https://github.com/akash-b-s/Food-Donation-application.git" class="project-button">GitHub</a>
             </div>
-            <div class="project-item">
-                <img src="project/subscription.png" alt="Project 3 Image">
-                <h2>Subscription Management App-ongoing</h2>
-                
-                <a href="https://www.figma.com/design/AifuN47rEwH2wNRt9Rb1vN/Subscription-%26-Recurring-Bill-Management-App?node-id=0-1&t=k6f1dEw0geOnpBCF-1" class="project-link">Learn More</a>
+            <div class="project-card">
+              <img src="project/subscription.png" alt="Project 3 Image" class="project-image" />
+              <h2 class="project-title">Subscription Management App</h2>
+              <p class="project-description">An ongoing Figma prototype for managing recurring bills and subscriptions with ease.</p>
+              <a href="https://www.figma.com/design/AifuN47rEwH2wNRt9Rb1vN/Subscription-%26-Recurring-Bill-Management-App?node-id=0-1&t=k6f1dEw0geOnpBCF-1" class="project-button">View Design</a>
             </div>
-        </div>
-    </div>
-</div>
-<!----------------Contact----------->
-     <div id="Contact">
-        <div class="contact">
-            <div class="row">
-            <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>    
-                <p><i class="fa-solid fa-envelope"></i>akash190504@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>8825992014</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/akash-b-s-30b4b6264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100042285042327&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/invites/contact/?i=oh4nc1povvju&utm_content=fl3d2wn"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/Akashcoding1905/Akashcoding1905.git"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <a href="image/Resume.pdf" download class="button">Download</a>
-            </div>
-            <div classs="contact-right"></div>
-            <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="button">Submit</button>
-            </form>
-            <span id="msg"></span>
           </div>
         </div>
+      </div>
+      
+<!----------------Contact----------->
+     <div id="Contact">
+       <div class="contact">
+    <div class="row">
+      
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>    
+        <p><i class="fa-solid fa-envelope"></i> akash190504@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> 8825992014</p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/akash-b-s-30b4b6264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100042285042327&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/invites/contact/?i=oh4nc1povvju&utm_content=fl3d2wn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/Akashcoding1905/Akashcoding1905.git"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <a href="image/Akash Resume.pdf" download class="button">Download Resume</a>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="button">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+
+    </div>
+  </div>
         <div class="copyright">
-            <p><center>Copyright @ Created by Akash.</center></p>
+            <p><center>Copyright © 2024 Akash B S. All Rights Reserved.</center></p>
         </div>
         </div>
    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -281,7 +330,7 @@
             .catch(error => console.error('Error!', error.message))
         })
         var typed=new Typed(".typing",{
-            strings: ["Web development","UI/UX Design","Cloud Computing"],
+            strings: ["Web development","UI/UX Designing","Cloud Computing"],
             typeSpeed:150,
             backSpeed:150,
             loop:true
